@@ -7,15 +7,16 @@ info_items = [
     ("Tools", "VS Code, Git, DaVinci Resolve")
 ]
 
-svg_w, svg_h = 490, 300
+svg_w, svg_h = 490, 260
 
 svg_content = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
     f'<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}">',
     '  <style>',
-    '    .title { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }',
-    '    .label { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 12px; font-weight: bold; fill: #79c0ff; }',
-    '    .value { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 12px; fill: #c9d1d9; }',
-    '    .prompt { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 12px; fill: #7ee787; }',
+    '    .title { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }',
+    '    .label { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; font-weight: bold; fill: #79c0ff; }',
+    '    .value { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; fill: #c9d1d9; }',
+    '    .prompt { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; fill: #7ee787; }',
     '  </style>',
     '  <rect width="100%" height="100%" fill="#0d1117" rx="6" stroke="#30363d" stroke-width="1"/>',
     '  <g transform="translate(20, 30)">',
@@ -38,4 +39,4 @@ svg_content.append('</svg>')
 with open("info-card.svg", "w", encoding="utf-8") as f:
     f.write("\n".join(svg_content))
 
-print("Generated info-card.svg successfully!")
+print("Regenerated info-card.svg successfully!")
