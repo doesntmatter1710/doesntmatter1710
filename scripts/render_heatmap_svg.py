@@ -1,11 +1,17 @@
 import json
+import os
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
-with open("data/contributions.json") as f:
-    data = json.load(f)
-
-days = data.get("days", [])
+# Ensure data file exists and load it safely
+days = []
+if os.path.exists("data/contributions.json"):
+    try:
+        with open("data/contributions.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+            days = data.get("days", [])
+    except Exception as e:
+        print(f"Error reading JSON: {e}")
 
 BOX_SIZE = 11
 GAP = 3
@@ -25,14 +31,20 @@ for idx, day in enumerate(days):
     dow = idx % 7
     x = week * (BOX_SIZE + GAP)
     y = dow * (BOX_SIZE + GAP)
-    color = PALETTE[min(day["level"], len(PALETTE) - 1)]
-    delay = (week + dow) * 0.1
+    
+    level = min(max(day.get("level", 0), 0), len(PALETTE) - 1)
+    color = PALETTE[level]
+    delay = round((week + dow) * 0.08, 2)
 
-    svg_lines.append(f'    <rect x="{x}" y="{y}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{color}">')
-    svg_lines.append(f'      <animate attributeName="opacity" values="0.25;1;0.25" begin="{delay:.2f}s" dur="6s" repeatCount="indefinite" />')
-    svg_lines.append(f'    </rect>')
-    svg_lines.append('  </g>')
-    svg_lines.append('</svg>')
+    rect_element = (
+        f'    <rect x="{x}" y="{y}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{color}" opacity="0">\n'
+        f'      <animate attributeName="opacity" to="1" begin="{delay}s" dur="0.8s" fill="freeze" />\n'
+        f'    </rect>'
+    )
+    svg_lines.append(rect_element)
+
+svg_lines.append('  </g>')
+svg_lines.append('</svg>')
 
 with open("contrib-heatmap.svg", "w", encoding="utf-8") as f:
     f.write("\n".join(svg_lines))
