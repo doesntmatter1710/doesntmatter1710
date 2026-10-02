@@ -13,27 +13,27 @@
     <g transform="translate(0, 40)">
       <text class="prompt">&gt;</text>
       <text x="15" class="label">OS:</text>
-      <text x="120" class="value">Windows / WSL (Ubuntu)</text>
+      <text x="140" class="value">Windows / WSL2 (Ubuntu)</text>
     </g>
     <g transform="translate(0, 75)">
       <text class="prompt">&gt;</text>
       <text x="15" class="label">Languages:</text>
-      <text x="120" class="value">C++, Python, JavaScript</text>
+      <text x="140" class="value">Python, C, C++, JavaScript</text>
     </g>
     <g transform="translate(0, 110)">
       <text class="prompt">&gt;</text>
-      <text x="15" class="label">Stack:</text>
-      <text x="120" class="value">Node.js, Express, MongoDB, React, Tailwind</text>
+      <text x="15" class="label">OSINT &amp; Recon:</text>
+      <text x="140" class="value">SpiderFoot, Nmap, Wireshark</text>
     </g>
     <g transform="translate(0, 145)">
       <text class="prompt">&gt;</text>
-      <text x="15" class="label">Focus:</text>
-      <text x="120" class="value">Full-Stack Dev, OSINT & Security Tools</text>
+      <text x="15" class="label">Environment:</text>
+      <text x="140" class="value">VS Code, Git, Bash / PowerShell</text>
     </g>
     <g transform="translate(0, 180)">
       <text class="prompt">&gt;</text>
-      <text x="15" class="label">Tools:</text>
-      <text x="120" class="value">VS Code, Git, DaVinci Resolve</text>
+      <text x="15" class="label">Creative &amp; Media:</text>
+      <text x="140" class="value">DaVinci Resolve</text>
     </g>
   </g>
 </svg>
