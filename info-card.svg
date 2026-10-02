@@ -23,17 +23,17 @@
     <g transform="translate(0, 110)">
       <text class="prompt">&gt;</text>
       <text x="15" class="label">OSINT &amp; Recon:</text>
-      <text x="140" class="value">SpiderFoot, Nmap, Wireshark</text>
+      <text x="140" class="value">SpiderFoot, Toutatis, IG-Detective, Nmap</text>
     </g>
     <g transform="translate(0, 145)">
       <text class="prompt">&gt;</text>
-      <text x="15" class="label">Environment:</text>
-      <text x="140" class="value">VS Code, Git, Bash / PowerShell</text>
+      <text x="15" class="label">Analysis &amp; Net:</text>
+      <text x="140" class="value">Wireshark, ExifRead, IPWhois, NetworkX</text>
     </g>
     <g transform="translate(0, 180)">
       <text class="prompt">&gt;</text>
-      <text x="15" class="label">Creative &amp; Media:</text>
-      <text x="140" class="value">DaVinci Resolve</text>
+      <text x="15" class="label">Environment:</text>
+      <text x="140" class="value">VS Code, Git, WSL2, MagiskOnWSA</text>
     </g>
   </g>
 </svg>
