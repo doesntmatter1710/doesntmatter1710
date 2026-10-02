@@ -7,7 +7,7 @@
 <div align="center">
 
 <h3><code>doesntmatter1710@github ~ $ ./contributions.sh</code></h3>
-<img src="https://raw.githubusercontent.com/doesntmatter1710/doesntmatter1710/main/contrib-heatmap.svg?v=3" width="860" />
+<img src="contrib-heatmap.svg?v=10" width="860" alt="Contribution Heatmap" />
 
 <br><br>
 
