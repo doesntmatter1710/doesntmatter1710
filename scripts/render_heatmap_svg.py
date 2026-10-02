@@ -26,14 +26,13 @@ for idx, day in enumerate(days):
     x = week * (BOX_SIZE + GAP)
     y = dow * (BOX_SIZE + GAP)
     color = PALETTE[min(day["level"], len(PALETTE) - 1)]
-    delay = (week + dow) * 0.02
+    delay = (week + dow) * 0.1
 
-    svg_lines.append(f'    <rect x="{x}" y="{y}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{color}" opacity="0">')
-    svg_lines.append(f'      <animate attributeName="opacity" to="1" begin="{delay}s" dur="0.3s" fill="freeze" />')
+    svg_lines.append(f'    <rect x="{x}" y="{y}" width="{BOX_SIZE}" height="{BOX_SIZE}" rx="2" fill="{color}">')
+    svg_lines.append(f'      <animate attributeName="opacity" values="0.25;1;0.25" begin="{delay:.2f}s" dur="6s" repeatCount="indefinite" />')
     svg_lines.append(f'    </rect>')
-
-svg_lines.append('  </g>')
-svg_lines.append('</svg>')
+    svg_lines.append('  </g>')
+    svg_lines.append('</svg>')
 
 with open("contrib-heatmap.svg", "w", encoding="utf-8") as f:
     f.write("\n".join(svg_lines))
