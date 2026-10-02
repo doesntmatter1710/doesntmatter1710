@@ -39,4 +39,4 @@ svg_content.append('</svg>')
 with open("info-card.svg", "w", encoding="utf-8") as f:
     f.write("\n".join(svg_content))
 
-print("Regenerated info-card.svg with actual toolkit successfully!")
+print("Regenerated sanitized info-card.svg successfully!")
